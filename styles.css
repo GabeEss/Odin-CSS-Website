@@ -1,10 +1,14 @@
-*
-{
+* {
+    /* This affects the whole webpage. I used 0 margins/padding to get rid of
+    the white border surrounding my webpage.*/
     margin:0;
     padding:0;
 }
 
 body{
+    /*Affects the body in the index. Changed the axis.
+    justify-content: flex-start and min-height: 100vh helps to push
+    the footer to the bottom */
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -12,12 +16,21 @@ body{
 }
 
 header{
+    /*Adjusting the margins will affect the white space of the webpage.
+    So I adjusted the padding to extend the background space of the header.
+    Doing it in the header also ensures that each container within the header
+    will have the same content space (which lays the space out neatly).*/
     background-color: #1f2937;
     padding-left: 100px;
     padding-right: 100px;
 }
 
 .logo-links{
+    /*Altered the logo and links into a flex-row (default position).
+    Further altered the position with justify-content, so that
+    the logo and links were spaced to the ends of the content space.
+    The links are in their own container separate from the logo, so
+    that prevents each link from being spaced separately from one another.*/
     display: flex;
     justify-content: space-between;
     padding-top: 20px;
@@ -30,6 +43,10 @@ header{
 }
 
 a{
+    /*Changed the font of the links. Changed the size. Removed the underline.
+    Note: This will change all anchors on this page. These are the only
+    anchors on the page, so I felt okay with formatting them like this.
+    The padding affects the distance between each other.*/
    color: #e5e7eb;
    font-size: 18px; 
    text-emphasis: none;
@@ -38,12 +55,17 @@ a{
 }
 
 .awesome-image{
+    /*Once again altered the flex-direction of this container and made it
+    a row.*/
     display: flex;
     justify-content: space-between;
     padding-bottom: 50px;
 }
 
 .website-awesome{
+    /*Altered the flex direction of this container into a column. Allowed
+    the text within to wrap around. Created space between the image
+    container and the text container (this container) with padding.*/
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -51,6 +73,8 @@ a{
 }
 
 button{
+    /*This affects all buttons on the page. Got rid of the border outline.
+    Curved the corners with border-radius.*/
     background-color:#3882f6;
     color: #f9faf8;
     width: 100px;
@@ -60,11 +84,23 @@ button{
     outline-style: none;
 }
 
+button#border-white{
+    /*Had to add an id to my html button element. Was necessary
+    because the background color was the same as this particular
+    button color. Had to alter the margin this time to space the button.*/
+    border-style: solid;
+    border-color: #f9faf8;
+    margin-left: 80px;
+}
+
 .images{
+    /*All images in this class have their edges curved.*/
     border-radius: 10px;
 }
 
 h1{
+    /*Each section should have a heading to differentiate with strong
+    emphasis.*/
     color:#f9faf8;
     font-size: 48px;
     font-weight:900;
@@ -78,6 +114,8 @@ h1{
 }
 
 .white-space{
+    /*Altered the flex direction into a column. Centered the items. Cut
+    the content space on the left and right by 200px each.*/
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -94,19 +132,35 @@ h2{
 }
 
 .four-images{
+    /*This class contains the 4 images within the white-space 
+    class of the webpage. Altered the flex direction into a column
+    so the images would be side by side. Created a gap between the images
+    of 3em in distance.*/
     display: flex;
     gap: 3em;
     padding-bottom: 100px;
 }
 
-.image-over-subtext{
+.image-over-subtext {
+    /*Used this class a lot to change flex direction. Usually the 
+    elements within this class would be an image over some subtext, thus
+    flex direction is column. I also used this class for the quotation section.*/
     display:flex;
     flex-direction: column;
     font-size: 18px;
     color: #1f2937;
 }
 
+.image-over-subtext #center{ 
+    /*Because I used the image-over-subtext class in more situations
+    than just image over subtext, I also added in an extra id selector
+    for the actual image sections so that the text underneath
+    would be aligned in the center.*/
+    text-align: center;
+}
+
 .quote{
+    /*New container, new display direction. This time a row. */
     display: flex;
     background-color: #e5e7eb;
     padding-left: 200px;
@@ -116,12 +170,16 @@ h2{
 }
 
 .quote p{
+    /*Styled the paragraph(s) in this section.*/
     font-size: 28px;
     font-weight: light;
     font-style: italic;
 }
 
 #author{
+    /*Created an id selector to style and reposition the text designating
+    the author of the quote. I repositioned by using margin-left: auto.
+    This pushed the text to the opposite side of the content space.*/
     font-size: 16px;
     font-weight: light;
     font-style: italic;
@@ -131,10 +189,44 @@ h2{
 }
 
 .call-to-action{
+    /*New container, new flex-direction. This is a row. Set it up to be
+    a blue box around white space. That's why the margins were altered this
+    time (to add the white space). The padding was used to push the
+    blue space. The border-radius was used so the blue box
+    wouldn't look jagged.*/
+display: flex;
+background-color: #3882f6;
+margin-left: 200px;
+margin-right: 200px;
+margin-top: 100px;
+margin-bottom: 100px;
+padding-left: 50px;
+padding-right: 50px;
+padding-top: 30px;
+padding-bottom: 30px;
+border-radius: 5px;
+}
 
+h3{
+    color: #f9faf8;
+}
+
+#call-action{
+    color:#f9faf8;
 }
 
 footer{
+    /*To push this to the bottom check the comments I made in the body
+    section. Also I added in margin-top: auto. Otherwise, I set up
+    the flex container (flex direction is row by default). Centered
+    along the main axis (justify-content) and
+    the cross axis (align-items). Padding was altered all around by
+    25px.*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
     background-color: #1f2937;
     margin-top: auto;
+    color: #f9faf8;
 }
