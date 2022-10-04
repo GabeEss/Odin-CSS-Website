@@ -47,7 +47,7 @@ a{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    padding-right: 25px;
+    padding-right: 30px;
 }
 
 button{
@@ -64,7 +64,7 @@ button{
     border-radius: 10px;
 }
 
-h{
+h1{
     color:#f9faf8;
     font-size: 48px;
     font-weight:900;
@@ -74,7 +74,64 @@ h{
 #header-subtext{
     color: #e5e7eb;
     font-size: 18px; 
-    padding-bottom: 4px;
+    padding-bottom: 8px;
+}
+
+.white-space{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 200px;
+    padding-right: 200px;
+}
+
+h2{
+    padding-top: 25px;
+    padding-bottom: 25px;
+    font-size: 36px;
+    font-weight: 900;
+    color: #1f2937;
+}
+
+.four-images{
+    display: flex;
+    gap: 3em;
+    padding-bottom: 100px;
+}
+
+.image-over-subtext{
+    display:flex;
+    flex-direction: column;
+    font-size: 18px;
+    color: #1f2937;
+}
+
+.quote{
+    display: flex;
+    background-color: #e5e7eb;
+    padding-left: 200px;
+    padding-right: 200px;
+    padding-bottom: 60px;
+    padding-top: 60px;
+}
+
+.quote p{
+    font-size: 28px;
+    font-weight: light;
+    font-style: italic;
+}
+
+#author{
+    font-size: 16px;
+    font-weight: light;
+    font-style: italic;
+    display: flex;
+    margin-left: auto;
+    padding-top: 25px;
+}
+
+.call-to-action{
+
 }
 
 footer{
